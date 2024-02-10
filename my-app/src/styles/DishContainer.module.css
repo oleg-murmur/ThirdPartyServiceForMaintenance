@@ -1,0 +1,10 @@
+.button_buy{
+    cursor: pointer;
+    font-size: larger;
+    transition: background-color 0.3s;
+    border-radius: 7px; 
+}
+.button_buy:hover{
+    background-color: #ff7d7d9f;
+    border-radius: 7px;
+}

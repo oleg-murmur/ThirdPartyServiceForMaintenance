@@ -1,0 +1,96 @@
+.backetContainer{
+    padding-top: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 500px;
+    min-height: 100vh;
+    /* background-color: #b89698; */
+    border-left: 1px solid rgba(0, 0, 0, 0.493);
+    border-right: 1px solid rgba(0, 0, 0, 0.493);
+    position: relative;
+}
+
+.DishOrderContainer{
+    display: flex;
+    flex-direction: row;
+    /* position: absolute; */
+    width: 100%;
+}
+.DishOrderContainer>div{
+    margin: 25px;
+}
+.DishList{
+    width: 250px;
+    background-color: #FF7D7E;
+    border-radius: 25px;
+    min-height: 300px;
+    padding: 15px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+
+    /* position: fixed;
+    bottom: 0;  */
+    /* left: 25%;  */
+    
+    height: 600px; /* Высота компонента */
+    background-color: #f0f0f0;
+    transition: bottom 0.5s ease; /* Добавим плавную анимацию */
+
+}
+
+.DishList[data-visible="true"]{
+    bottom: 0;
+}
+.DishList:last-child {
+    margin-bottom: 100px;
+}
+.DishList>div{
+    margin: 10px;
+}
+
+.payOrder{
+    height: 200px;
+    width: 160px;
+    background-color: #f0f0f0;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    border-radius: 25px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+}
+.payOrderSBP{
+    background-color: #3eff03;
+}
+.payOrderAnother{
+    background-color: #FF7D7E;
+}
+.payOrder>div{
+    margin: 10px 0 10px 0;
+    cursor: pointer;
+    border-radius: 25px;
+    border: 1px solid rgba(0, 0, 0, 0.103);
+    padding: 5px;
+    height: 50px;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.DishListItem{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+.DishListItemName{
+    word-wrap: break-word;
+    max-width: 130px;
+}
+.resultPrice{
+    border-top: 1px solid #00000075;
+    padding-top: 10px;
+}

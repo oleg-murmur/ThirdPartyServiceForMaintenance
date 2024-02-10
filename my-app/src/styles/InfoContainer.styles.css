@@ -1,0 +1,218 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+.main-InfoContainer{
+    margin-left: auto;
+    margin-right: auto;
+    flex-direction: row;
+    display: flex;
+    justify-content: center;
+}
+.TypeContainer{
+    padding-top: 20px;
+    display: flex;
+
+    flex-direction: column;
+    min-width: 150px;
+    border-left: 1px solid rgba(0, 0, 0, 0.493);
+}
+@media (max-width: 600px) {
+    .TypeContainer {
+      display: none;
+    }
+  }
+.TypeContainer-types{
+    /* padding-top: 10px;
+    padding-left: 15px; */
+
+    margin: 5px;
+    padding: 3px;
+    display: flex; 
+    flex-direction: column;
+    align-items: start;
+    min-height: 100px;
+    max-height: 200px;
+}
+.TypeContainer-type{
+    margin-bottom: 10px;
+    display: flex;
+    align-items: end;
+    padding: 5px;
+    width: 100%;
+    
+    font-size: 1em;
+    font-weight:300;
+    font-family: 'Wix Madefor Display';
+    cursor: pointer;
+}
+.TypeContainer-type:hover{
+    background-color: #ff7d7dc9;
+    transition: background-color 0.3s;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.InfoContainer{
+    padding-top: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 500px;
+    min-height: 100vh;
+    background-color: #FFCDD0;
+    border-left: 1px solid rgba(0, 0, 0, 0.493);
+    border-right: 1px solid rgba(0, 0, 0, 0.493);
+    
+}
+.InfoContainer>div{
+    margin-bottom: 10px;
+}
+
+.InfoContainer-first-content{
+    width: 95%;
+    height: 250px;
+
+    display: flex;
+    overflow-y: hidden;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+.InfoContainer-second-content{
+    width: 480px;
+    /* height: 200px; */
+
+    display: grid;
+
+
+    grid-template-columns: 1fr 1fr;
+}
+
+.InfoContainer-first-content-container-can{
+    position: relative;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    
+    margin: 0 5px 8px 5px;
+    background-color: #ff7d7db2;
+    justify-content: center; 
+}
+
+/*                                 */
+
+
+.InfoContainer-second-content-container{
+
+    display: flex;
+    height: 300px;
+    width: 230px;
+
+    border-radius: 15px;
+    margin: 0 5px 20px 5px;
+    
+    align-items: center;  
+    flex-direction: column;
+}
+.container-not{
+    border-radius: 15px;
+    position: absolute;
+    display: flex;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff80;
+    font-size: 1.5em;
+    text-align: center;
+    flex-direction: column;
+}
+.InfoContainer-second-content-img-container{
+    position: relative;
+    justify-content: center;
+    display: flex; 
+    height: 200px;
+    margin-bottom: 10px;
+    width: 230px;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+.InfoContainer-second-content-img-container img{
+    width: 230px;
+    height: 200px;
+    border-radius: 15px;
+    transition: transform 0.5s;
+}
+.InfoContainer-second-content-img-container img:hover {
+    transform: scale(1.2);
+  }
+.fingertap{
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    border: 1px solid #ffffff8f;
+    border-radius: 50%;
+    animation: pulse 2s infinite alternate;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+@keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(1.2);
+    }
+  }
+.InfoContainer-second-content-container-info{
+    display: flex;
+    flex-direction: column;
+    background-color: #ff7d7dc9;
+    border-radius: 15px;
+    width: 100%;
+    height: 100px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    padding: 8px;
+    
+}
+.InfoContainer-second-content-container-info:last-child{
+    margin-left: auto;
+}
+.InfoContainer-second-content-container-info-text-name {
+    display: flex;
+}
+.InfoContainer-second-content-container-info-text-price {
+    margin-top: 6px;
+    display: flex;
+    justify-content: start;
+}
+
+
+.container-not{
+    position: absolute;
+    display: flex;
+    right: 0;
+    width: 100%;
+    height: 100%;
+}
+.container-not-text{
+font-size: 1em;
+}
+
+/* .InfoContainer-first-content-container-can div{
+
+    display: flex;
+    margin: 5px;
+    justify-content: center;
+    padding: 5px;
+    width: 200px;  
+} */
+.InfoContainer-main-content{
+    width: 90%;
+    height: 200px;
+    justify-content: center;
+    display: flex;
+}

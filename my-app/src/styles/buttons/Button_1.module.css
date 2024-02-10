@@ -1,0 +1,43 @@
+.ButtonOpenModalByDish {
+    margin-top: 30px;
+    display: inline-block;
+    min-width: 150px;
+    min-height: 80px;
+    max-width: 200px;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    padding: 8px;
+    border: none;
+    text-decoration: none;
+    border-radius: 25px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    background: #ffbfbe;
+    transition: .2s ease-in-out;
+    border: 2px solid #ff7d7d86;
+    position: relative;
+    overflow: hidden;
+    font-size: 0.7em;
+    font-weight:500;
+    font-family: 'Wix Madefor Display';
+    cursor: pointer;
+}
+
+.ButtonOpenModalByDish:hover {
+    background: #ffaead;
+    color: #000000;
+}
+.ButtonOpenModalByDish:before {
+    content: "";
+  background: linear-gradient(90deg, rgba(255, 255, 255, .1), rgba(255, 255, 255, .5));
+  height: 80px;
+  width: 50px;
+  position: absolute;
+  top: 0px;
+  left: -85px;
+  transform: skewX(-45deg);
+}
+.ButtonOpenModalByDish:hover:before {
+    left: 250px;
+    transition: .4s ease-in-out;
+}

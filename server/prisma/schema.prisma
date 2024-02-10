@@ -1,0 +1,74 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+// import {Dish} from '../models/Dish.prisma';
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Dish {
+  id              Int              @id @default(autoincrement())
+  name            String
+  price           String
+  cookingTime     String
+  canOrder        Boolean
+  productsList    ProductToDish[]
+  timeForLetOrder TimeIntervalToDish[]
+  cookingTeamId   DishTeamAssignment[]
+  menu          Menu      @relation(fields: [menuId], references: [id])
+  menuId        Int
+}
+
+model Product {
+  id              Int  @id @default(autoincrement())
+  name             String 
+  dishes          ProductToDish[]
+}
+model TimeInterval {
+  id              Int  @id @default(autoincrement())
+  dish            TimeIntervalToDish[]
+  name             String 
+}
+model CookingTeam {
+  id        Int       @id @default(autoincrement())
+  name      String
+  // Другие поля, связанные с командой поваров
+
+  dishes    DishTeamAssignment[]    // Каждая команда может готовить множество блюд
+}
+ model Menu {
+  id       Int      @id @default(autoincrement())
+  name     String
+
+  dishes   Dish[]
+}
+
+
+
+
+model  DishTeamAssignment {
+  id              Int       @id @default(autoincrement())
+  dish            Dish      @relation(fields: [dishId], references: [id])
+  dishId          Int
+  cookingTeam    CookingTeam   @relation(fields: [cookingTeamId], references: [id])
+  cookingTeamId       Int
+}
+model ProductToDish {
+  id              Int       @id @default(autoincrement())
+  dish            Dish      @relation(fields: [dishId], references: [id])
+  dishId          Int
+  product         Product   @relation(fields: [productId], references: [id])
+  productId       Int
+}
+model TimeIntervalToDish{
+id              Int       @id @default(autoincrement())
+  dish            Dish      @relation(fields: [dishId], references: [id])
+  dishId          Int
+  timeInterval    TimeInterval   @relation(fields: [timeIntervalId], references: [id])
+  timeIntervalId       Int
+}

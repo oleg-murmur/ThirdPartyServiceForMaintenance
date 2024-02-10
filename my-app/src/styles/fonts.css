@@ -1,0 +1,10 @@
+@font-face {
+    font-family: 'regular';
+    src: local('test'),url(../assets/resource/Ubuntu-Regular.ttf) format('truetype');
+ 
+}
+@font-face {
+    font-family: 'Wix Madefor Display';
+    src: local('test'),url(../assets/resource/WixMadeforDisplay-VariableFont_wght.ttf) format('truetype');
+ 
+}
