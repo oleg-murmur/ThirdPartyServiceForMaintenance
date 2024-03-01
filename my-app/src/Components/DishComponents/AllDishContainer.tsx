@@ -13,6 +13,8 @@ interface IDishProps {
 }
 
 const AllDishContainer = (props:IDishProps) => {
+
+
     return (
         <div className="InfoContainer-second-content">
         {props.dishes.map((item:any) =>

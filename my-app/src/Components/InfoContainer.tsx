@@ -9,6 +9,16 @@ import TypeContainer from './TypeContainer';
 import AllDishContainer from '@/Components/DishComponents/AllDishContainer';
 import LoaderDish from './Loader/LoaderDish';
 
+
+const DEFAULT_DISHES = [
+    {
+        id: 'test1',
+        name: 'test1',
+        price: 'test1'
+    }]
+
+
+
 const InfoContainer = () => {
 
     const [dishes,setDish] = useState<[]>([])
@@ -23,6 +33,10 @@ const InfoContainer = () => {
         setStatusData(false)
         let dataTeams = await getAllTeams()
         let DataDishes = await getAllDishes()
+
+        if(!DataDishes) DataDishes = DEFAULT_DISHES
+
+        if(!dataTeams) dataTeams = []
 
         setDish(DataDishes)
 

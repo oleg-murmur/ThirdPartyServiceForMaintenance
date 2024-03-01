@@ -7,12 +7,13 @@ axios.defaults.baseURL = FIRST_API_URL
 
 export const getAllDishes = async () => {
     try {
-        const {data} = await axios.get('dishes/allDishes', {
+        let {data} = await axios.get('dishes/allDishes', {
             params: {
                 //typeId: id
             }
         })
-        // console.log(data, 'API data from server')
+        if(!data)  data = []
+
         return data
     } catch (error) {
         console.log(error)

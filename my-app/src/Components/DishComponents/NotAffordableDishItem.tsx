@@ -27,7 +27,7 @@ const NotAffordableDishItem = ({item}: IItemProps) => {
             <div className="InfoContainer-second-content-container-info">
                 <div className="InfoContainer-second-content-container-info-text">
                     <div className="InfoContainer-second-content-container-info-text-name">{item.name}</div>
-                    <div className="InfoContainer-second-content-container-info-text-price">{item.price} dollars</div>
+                    <div className="InfoContainer-second-content-container-info-text-price">{item.price} рублей</div>
                 </div>
 
             </div>
