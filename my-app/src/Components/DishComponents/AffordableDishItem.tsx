@@ -28,7 +28,7 @@ const AffordableDishItem = ({item}: IItemProps) => {
         status: false
     }
 
-    const openModal = (name: string) => {
+    const addDeleteDishToBacket = (name: string) => {
         if(obj.status === false) {
             
             dispatch(addDishInBacket(item))
@@ -47,9 +47,9 @@ const AffordableDishItem = ({item}: IItemProps) => {
     return (
         <div className="InfoContainer-second-content-container">
 
-            <div className="InfoContainer-second-content-img-container" onClick={()=> openModal(item.name)}>
+            <div className="InfoContainer-second-content-img-container" onClick={()=> addDeleteDishToBacket(item.name)}>
                 <img src={Image2}/>
-                <div className="fingertap">
+                <div className="fingertap" style={{pointerEvents: 'none'}}>
                     <FingerTap color={"#FFCDD0"} width={50} height={50}/>
                 </div>
             </div>
