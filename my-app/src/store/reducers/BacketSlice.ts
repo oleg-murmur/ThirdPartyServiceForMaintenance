@@ -37,12 +37,9 @@ export const backetSlice = createSlice({
         },
         deleteDishInBacket(state: any,action: PayloadAction<IDish>) {
            console.log(state)
-           state.dishes.filter((dish: { id: number; }) => {
-                dish.id !== action.payload.id
+            state.dishes.splice(state.dishes
+                .findIndex((dish: { id: number; }) => dish.id === action.payload.id), 1);
 
-            })
-            // console.log(before)
-            // console.log(result)
             // req to db for delete
         },
 
